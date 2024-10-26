@@ -13,7 +13,16 @@ body{
     justify-content: center;
     justify-content: center;
 }
-
+h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.num_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 #display{
 margin: 5px;
 border: solid;
@@ -25,9 +34,8 @@ background-color: lightgreen;
 opacity: 0.8;
 border-radius: 8px;
 display: flex;
-justify-content: right;
-align-items: end;
-padding: x;
+justify-content:space-between;
+padding: 10px;
 }
 .clear{
     background-color: red;
