@@ -26,7 +26,7 @@ const mult = document.querySelector('.multiply')
 mult.addEventListener('click',()=> mul=true)
 
 const divd = document.querySelector('.divide')
-mult.addEventListener('click',()=> div=true)
+divd.addEventListener('click',()=> div=true)
 
 const per = document.querySelector('.percent')
 per.addEventListener('click',()=>percent=true)
@@ -45,12 +45,12 @@ function operate(a,b){
         sum =  numA*numB
     }else if(div){
         div = false
-        sum =  numA/numB
+        numB ==0 ? display2.textContent='Nope':sum=numA/numB
     }else if(percent){
         percent = false
         sum =  (numA/numB)*100
     }
-    display2.textContent = sum
+    display2.textContent = sum.toFixed(2)
 
 }
 
@@ -101,8 +101,11 @@ num.forEach(function(button){
          b += button.value
          display.textContent +=button.value
         }
+        oper.forEach(button => button.disabled = false)
     })
 })
+
+oper.forEach(button => button.disabled = true)
 
 oper.forEach(function(button){
     button.addEventListener('click',function(){
@@ -110,6 +113,8 @@ oper.forEach(function(button){
         head.textContent=''
         storeinA =false
         deci.disabled = false
+
+        oper.forEach(button => button.disabled = true);
     })
 })
 

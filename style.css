@@ -23,6 +23,18 @@ h1{
     flex-direction: column;
     justify-content: space-between;
 }
+
+.screen{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.screen2{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
 #display{
 margin: 5px;
 border: solid;
@@ -30,10 +42,13 @@ border-color: grey;
 border-width: 3px;
 min-width: 300px;
 min-height: 100px;
+max-width: 300px;
+max-height: 100px;
 background-color: lightgreen;
 opacity: 0.8;
 border-radius: 8px;
 display: flex;
+flex: 0 0 1;
 justify-content:space-between;
 padding: 10px;
 }
